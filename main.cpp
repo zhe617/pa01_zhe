@@ -31,17 +31,13 @@ int main(int argv, char **argc)
   // Read each file
   while (getline(cardFile1, line) && (line.length() > 0))
   {
-  }
-  cardFile1.close();
-
-  while (getline(cardFile2, line) && (line.length() > 0))
-  {
     Card c;
     c.suit = line[0];
     c.value = line.substr(2);
     alice.insert(c);
   }
-  cardFile2.close();
+  cardFile1.close();
+
   while (getline(cardFile2, line) && (line.length() > 0))
   {
     Card c;
